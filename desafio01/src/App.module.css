@@ -1,0 +1,112 @@
+.app{
+    width: 100%;
+}
+
+.box{
+    width: 70rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.newTask{
+    display: flex;
+    width: 70rem;
+    margin: 0 auto;
+    gap: 1rem;
+    position: absolute;
+    top: -3rem;
+}
+.newTask > input{
+    padding: 1.6rem;
+    width: 100%;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px; 
+    background: var(--gray-500);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size:  1.6rem;
+    color: var(--white);
+}
+.newTask > input:focus{
+    
+    outline: none;
+    border: 1px solid var(--purple-dark);
+}
+.newTask >button{
+    min-width: 9rem;
+    background: var(--blue-dark);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size:  1.6rem; 
+    border: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: .8rem;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+.newTask >button:hover{
+    background: var(--blue);
+    
+}
+
+.task{
+    width: 70rem;
+    
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.taskText{
+  
+    display: flex;
+    
+
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.taskText > p span{
+    background: var(--gray-400);
+    border-radius: 999px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    color: var(--gray-200);
+    
+}
+.taskCards{
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    margin-top: 2.4rem;
+}
+
+.noTask{
+    margin-top: 6.4rem;
+    display: grid;
+    justify-items: center;
+}
+.noTask >svg{
+    margin-bottom: 1.6rem;
+}
+
+.noTask > p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--gray-300);
+}
+.noTask > span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--gray-300);
+}
