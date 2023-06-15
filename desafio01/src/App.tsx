@@ -22,6 +22,7 @@ export function App() {
 
     if (!contentExists) {
       setTasks([...tasks, { content: newTask, done: false }]);
+      setNewTask("")
     } else {
       alert("Tarefa ja criada");
     }
@@ -54,6 +55,7 @@ export function App() {
           <input
             type="text"
             placeholder="Adicione uma nova tarefa"
+            value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
           <button>
