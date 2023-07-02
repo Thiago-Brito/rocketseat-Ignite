@@ -13,7 +13,67 @@ import { ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
 import { CardFood } from './components/CardFood'
 import Coffee1 from '../../assets/coffee1.png'
 
+export interface Food {
+  id: number
+  image: string
+  ingredients: string[]
+  title: string
+  subtitle: string
+  price: number
+}
+
 export function Home() {
+  const foods: Food[] = [
+    {
+      id: 1,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+    {
+      id: 2,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+    {
+      id: 3,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+    {
+      id: 4,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+    {
+      id: 5,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+    {
+      id: 6,
+      image: Coffee1,
+      ingredients: ['Tradicional'],
+      title: 'Expresso Tradicional',
+      subtitle: 'O tradicional café feito com água quente e grãos moídos',
+      price: 9.9,
+    },
+  ]
+
   return (
     <HeaderContainer>
       <IntroText>
@@ -57,12 +117,11 @@ export function Home() {
       </IntroText>
       <Foods>
         <h2>Nossos cafés</h2>
-        <CardFood
-          image={Coffee1}
-          ingredients={['Tradicional', 'com leite']}
-          title={'Expresso Tradicional'}
-          subtitle={'O tradicional café feito com água quente e grãos moídos'}
-        />
+        <div>
+          {foods.map((food) => (
+            <CardFood key={food.id} {...food} />
+          ))}
+        </div>
       </Foods>
     </HeaderContainer>
   )

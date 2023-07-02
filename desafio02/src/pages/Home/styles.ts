@@ -93,4 +93,9 @@ export const Foods = styled.div`
     line-height: 130%;
     margin-bottom: 5.4rem;
   }
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
 `

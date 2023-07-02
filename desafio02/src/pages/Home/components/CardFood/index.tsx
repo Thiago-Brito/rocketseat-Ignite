@@ -1,15 +1,19 @@
-import { FoodContainer, PriceQuantityControl, TextIngredients } from './styles'
+import { Food } from '../..'
+import {
+  CartButton,
+  Counter,
+  FoodContainer,
+  PriceQuantityControl,
+  TextIngredients,
+} from './styles'
 
-export interface food {
-  image: string
-  ingredients: Array<string>
-  title: string
-  subtitle: string
-  /*
-  price: number */
-}
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 
-export function CardFood({ image, ingredients, title, subtitle }: food) {
+export function CardFood({ image, ingredients, title, subtitle, price }: Food) {
+  const formattedPrice = price.toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
   return (
     <FoodContainer>
       <img src={image} alt="" />
@@ -22,7 +26,19 @@ export function CardFood({ image, ingredients, title, subtitle }: food) {
       <h3>{title}</h3>
       <p>{subtitle}</p>
       <PriceQuantityControl>
-        <p>R</p>
+        <p>
+          R$ <span>{formattedPrice}</span>
+        </p>
+        <div>
+          <Counter>
+            <Minus size={14} />
+            1
+            <Plus size={14} />
+          </Counter>
+          <CartButton>
+            <ShoppingCart weight="fill" size={22} />
+          </CartButton>
+        </div>
       </PriceQuantityControl>
     </FoodContainer>
   )
