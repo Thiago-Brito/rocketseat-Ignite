@@ -5,6 +5,9 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 3.2rem 0;
   margin-bottom: 9.4rem;
+  > img {
+    cursor: pointer;
+  }
 
   nav {
     display: flex;
@@ -37,6 +40,7 @@ export const LocationTag = styled(Tag)`
 `
 
 export const CartTag = styled(Tag)`
+  cursor: pointer;
   background: ${(props) => props.theme['yellow-light']};
   svg {
     color: ${(props) => props.theme['yellow-dark']};
