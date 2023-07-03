@@ -13,4 +13,9 @@ export const CheckOutContainer = styled.form`
     line-height: 130%;
     margin-bottom: 1.5rem;
   }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 `
